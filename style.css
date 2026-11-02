@@ -113,3 +113,5 @@ address{font-style:normal}
 /* Calculator is portrait-shaped: retain all inputs rather than cropping the result. */
 .gallery .shot:nth-child(3) .shot-space img{object-fit:contain;background:var(--surface)}
 @media(max-width:700px){.gallery{grid-template-columns:1fr}.hero-shot .shot-space{aspect-ratio:1.4}.hero-shot .shot-space img{object-fit:cover;object-position:left top;width:auto;max-width:none;height:100%}}
+
+.btn.primary.soon,.btn.primary.soon:hover{background:var(--surface);color:var(--ink);border:1px dashed var(--accent);cursor:default}
