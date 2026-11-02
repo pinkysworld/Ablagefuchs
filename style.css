@@ -115,3 +115,21 @@ address{font-style:normal}
 @media(max-width:700px){.gallery{grid-template-columns:1fr}.hero-shot .shot-space{aspect-ratio:1.4}.hero-shot .shot-space img{object-fit:cover;object-position:left top;width:auto;max-width:none;height:100%}}
 
 .btn.primary.soon,.btn.primary.soon:hover{background:var(--surface);color:var(--ink);border:1px dashed var(--accent);cursor:default}
+
+/* Polish (2026-11-02): warmer hero, livelier cards, studio mark in the footer. */
+.hero{background:radial-gradient(60% 70% at 85% 30%,color-mix(in srgb,var(--orange) 16%,transparent),transparent 70%),radial-gradient(50% 60% at 0% 0%,color-mix(in srgb,var(--accent) 10%,transparent),transparent 70%),linear-gradient(180deg,var(--soft),var(--bg))}
+.hero h1{background:linear-gradient(100deg,var(--ink) 40%,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-shot .shot-space{transition:transform .35s ease,box-shadow .35s ease}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.hero-shot .shot-space:hover{transform:translateY(-4px)}.card,.btn{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.grid .card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}.btn.primary:not(.soon):hover{transform:translateY(-1px)}}
+#funktionen .card{position:relative;padding-top:26px}
+#funktionen .card::before{content:"";position:absolute;left:22px;top:0;width:44px;height:4px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--accent),var(--orange))}
+#funktionen .card:nth-child(-n+2){background:linear-gradient(160deg,color-mix(in srgb,var(--orange) 9%,var(--surface)),var(--surface) 60%)}
+.sec h2{position:relative}
+.price{border-top:4px solid var(--accent)}
+.faq details[open]{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.faq summary::marker{color:var(--accent)}
+footer{background:var(--soft)}
+.studio{display:inline-block;margin:18px 0 10px;border-radius:8px;overflow:hidden;line-height:0;opacity:.92}
+.studio:hover{opacity:1}
+.studio img{width:200px;height:auto}
+#funktionen .grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:900px){#funktionen .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){#funktionen .grid{grid-template-columns:1fr}}
